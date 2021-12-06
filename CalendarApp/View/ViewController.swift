@@ -38,6 +38,7 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
             func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
                 print(date)
                 print("今日がタップされた")
+                print("コミット成功してくれ")
                 performSegue(withIdentifier: "toDatePopupSegue", sender: nil)
             }
     
