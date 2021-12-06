@@ -23,7 +23,7 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
     }
 
             func geWeek(){
-                print("内容を変更しました")
+                print("内容を変更しまし")
                 //    月曜日からに変更
                         fsCalendar.firstWeekday = 4
                 //        曜日を日本語に
