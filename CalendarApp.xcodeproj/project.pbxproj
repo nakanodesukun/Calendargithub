@@ -48,7 +48,6 @@
 				DF92A40520AE2C36144FC3CC /* Pods-CalendarApp.debug.xcconfig */,
 				15DA6F498146F51C226CC8DB /* Pods-CalendarApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +80,39 @@
 		95DA58B7275DD60000812FAF /* CalendarApp */ = {
 			isa = PBXGroup;
 			children = (
+				95DA5913275DDD9A00812FAF /* Controller */,
+				95DA5914275DDDA700812FAF /* Model */,
+				95DA5912275DDD9000812FAF /* View */,
 				95DA58B8275DD60000812FAF /* AppDelegate.swift */,
 				95DA58BA275DD60000812FAF /* SceneDelegate.swift */,
-				95DA58BC275DD60000812FAF /* ViewController.swift */,
 				95DA58BE275DD60000812FAF /* Main.storyboard */,
 				95DA58C1275DD60100812FAF /* Assets.xcassets */,
 				95DA58C3275DD60100812FAF /* LaunchScreen.storyboard */,
 				95DA58C6275DD60100812FAF /* Info.plist */,
 			);
 			path = CalendarApp;
+			sourceTree = "<group>";
+		};
+		95DA5912275DDD9000812FAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				95DA58BC275DD60000812FAF /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		95DA5913275DDD9A00812FAF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		95DA5914275DDDA700812FAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
