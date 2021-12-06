@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6430EC9EA931F737056AF2F8 /* Pods_CalendarApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B4703B773A93DDF459887C /* Pods_CalendarApp.framework */; };
 		9597128C275DF51B00B7EBA6 /* RealmDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597128B275DF51B00B7EBA6 /* RealmDatas.swift */; };
+		9597128E275DF61100B7EBA6 /* RealmCRUDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597128D275DF61100B7EBA6 /* RealmCRUDModel.swift */; };
 		95DA58B9275DD60000812FAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA58B8275DD60000812FAF /* AppDelegate.swift */; };
 		95DA58BB275DD60000812FAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA58BA275DD60000812FAF /* SceneDelegate.swift */; };
 		95DA58BD275DD60000812FAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA58BC275DD60000812FAF /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 		15DA6F498146F51C226CC8DB /* Pods-CalendarApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarApp.release.xcconfig"; path = "Target Support Files/Pods-CalendarApp/Pods-CalendarApp.release.xcconfig"; sourceTree = "<group>"; };
 		80B4703B773A93DDF459887C /* Pods_CalendarApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9597128B275DF51B00B7EBA6 /* RealmDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDatas.swift; sourceTree = "<group>"; };
+		9597128D275DF61100B7EBA6 /* RealmCRUDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCRUDModel.swift; sourceTree = "<group>"; };
 		95DA58B5275DD60000812FAF /* CalendarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalendarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95DA58B8275DD60000812FAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95DA58BA275DD60000812FAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				95DA58BC275DD60000812FAF /* ViewController.swift */,
+				9597128D275DF61100B7EBA6 /* RealmCRUDModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				9597128C275DF51B00B7EBA6 /* RealmDatas.swift in Sources */,
 				95DA58B9275DD60000812FAF /* AppDelegate.swift in Sources */,
 				95DA58BB275DD60000812FAF /* SceneDelegate.swift in Sources */,
+				9597128E275DF61100B7EBA6 /* RealmCRUDModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
