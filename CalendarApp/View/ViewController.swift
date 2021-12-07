@@ -17,10 +17,10 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fsCalendar.delegate = self
-        fsCalendar.dataSource = self
+        
         geWeek()
     }
+    
 
             func geWeek(){
                 print("内容を変更しまし")
@@ -40,7 +40,8 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
                 print("今日がタップされたよ")
                 performSegue(withIdentifier: "toDatePopupSegue", sender: nil)
             }
-    
+   
+
     
 }
 

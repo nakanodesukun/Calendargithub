@@ -13,7 +13,7 @@ class RealmDatas:Object{
     @objc dynamic var day = String()
     @objc dynamic var title = String()
     @objc dynamic var memo = String()
-
+    
 }
 
 
