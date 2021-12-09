@@ -17,6 +17,8 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let date: Date = Date()
+        print(date)
         
         geWeek()
     }
