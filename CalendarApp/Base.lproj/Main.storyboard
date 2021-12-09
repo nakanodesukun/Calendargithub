@@ -115,7 +115,6 @@
         <!--Entry View Controller-->
         <scene sceneID="3cY-ni-Okt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="boB-6f-EQy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Anr-P2-w0Z" customClass="EntryViewController" customModule="CalendarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZcV-RS-9Bt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -147,7 +146,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
                                 <connections>
-                                    <action selector="didTapButton:" destination="Anr-P2-w0Z" eventType="touchUpInside" id="Xl4-3d-H4z"/>
+                                    <action selector="didTapSaveButton:" destination="Anr-P2-w0Z" eventType="touchUpInside" id="Rsd-ko-o4o"/>
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="qnU-oA-3tY">
@@ -173,6 +172,7 @@
                         <outlet property="textField" destination="tdJ-Lu-EYt" id="tyP-lR-jFQ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="boB-6f-EQy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2066.666666666667" y="77.678571428571431"/>
         </scene>

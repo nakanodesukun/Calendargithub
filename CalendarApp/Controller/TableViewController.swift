@@ -38,6 +38,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.textLabel?.text = data[indexPath.row].item
         return cell
     }
+//    タップされた時のアクション
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        選択の際にアニメーションで黒くする
         tableView.deselectRow(at: indexPath, animated: true)

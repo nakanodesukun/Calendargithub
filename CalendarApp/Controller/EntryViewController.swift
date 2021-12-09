@@ -29,7 +29,7 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
       return true
     }
     
-    @IBAction func didTapButton(_ sender: Any) {
+    @IBAction func didTapSaveButton(_ sender: Any) {
         if let text = textField.text, !text.isEmpty{
             let date = datePicker.date
             realm.beginWrite()
@@ -39,6 +39,7 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
             realm.add(NewItem)
             try! realm.commitWrite()
 //            completionHandler?()
+            dismiss(animated: true, completion: nil)
         }
         else {
             print("エラー")
