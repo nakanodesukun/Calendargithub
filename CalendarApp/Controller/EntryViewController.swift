@@ -43,6 +43,7 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
         else {
             print("エラー")
         }
+        
     }
     
 }
