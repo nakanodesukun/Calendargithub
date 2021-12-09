@@ -32,6 +32,13 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
     @IBAction func didTapButton(_ sender: Any) {
         if let text = textField.text, !text.isEmpty{
             let date = datePicker.date
+            realm.beginWrite()
+            let NewItem = ToDoListItem()
+            NewItem.date = date
+            NewItem.item = text
+            realm.add(NewItem)
+            try! realm.commitWrite()
+//            completionHandler?()
         }
         else {
             print("エラー")

@@ -19,9 +19,7 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
         super.viewDidLoad()
         let date: Date = Date()
         print(date)
-        
         geWeek()
-        print("授業がある")
     }
     
 
