@@ -27,25 +27,38 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         data = realm.objects(ToDoListItem.self).map({$0})
         table.delegate = self
         table.dataSource = self
+//        viewのサイズ
         view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = data[indexPath.row].item
         return cell
     }
+    
 //    タップされた時のアクション
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        選択の際にアニメーションで黒くする
         tableView.deselectRow(at: indexPath, animated: true)
+        self.performSegue(withIdentifier: "view", sender: nil)
+        }
+//選択されたcellを表示
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "view" {
+            let vc: ViewViewController = segue.destination as! ViewViewController
+            let indexPath = self.table.indexPathForSelectedRow
+            vc.argString = data[indexPath?.row ?? 0].item
+        }
     }
-    
-    
-    
+        
+        
+        
+        
     @IBAction func didTapButton(_ sender: Any) {
         
             performSegue(withIdentifier: "ToSegue", sender: nil)
@@ -71,20 +84,9 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @IBAction func closeButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+
+    
 }
-
-        
-
-

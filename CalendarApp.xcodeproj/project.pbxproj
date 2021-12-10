@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6430EC9EA931F737056AF2F8 /* Pods_CalendarApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B4703B773A93DDF459887C /* Pods_CalendarApp.framework */; };
+		953B916527622ED1009B4836 /* ViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953B916427622ED1009B4836 /* ViewViewController.swift */; };
 		959168482761BA7B0080DE06 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959168472761BA7B0080DE06 /* EntryViewController.swift */; };
-		9597128C275DF51B00B7EBA6 /* RealmDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597128B275DF51B00B7EBA6 /* RealmDatas.swift */; };
-		9597128E275DF61100B7EBA6 /* RealmCRUDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597128D275DF61100B7EBA6 /* RealmCRUDModel.swift */; };
 		95971292275F220800B7EBA6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95971291275F220800B7EBA6 /* TableViewController.swift */; };
 		95DA58B9275DD60000812FAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA58B8275DD60000812FAF /* AppDelegate.swift */; };
 		95DA58BB275DD60000812FAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA58BA275DD60000812FAF /* SceneDelegate.swift */; };
@@ -23,9 +22,8 @@
 /* Begin PBXFileReference section */
 		15DA6F498146F51C226CC8DB /* Pods-CalendarApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarApp.release.xcconfig"; path = "Target Support Files/Pods-CalendarApp/Pods-CalendarApp.release.xcconfig"; sourceTree = "<group>"; };
 		80B4703B773A93DDF459887C /* Pods_CalendarApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		953B916427622ED1009B4836 /* ViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewViewController.swift; sourceTree = "<group>"; };
 		959168472761BA7B0080DE06 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
-		9597128B275DF51B00B7EBA6 /* RealmDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDatas.swift; sourceTree = "<group>"; };
-		9597128D275DF61100B7EBA6 /* RealmCRUDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCRUDModel.swift; sourceTree = "<group>"; };
 		95971291275F220800B7EBA6 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		95DA58B5275DD60000812FAF /* CalendarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalendarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95DA58B8275DD60000812FAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +112,7 @@
 			children = (
 				95971291275F220800B7EBA6 /* TableViewController.swift */,
 				959168472761BA7B0080DE06 /* EntryViewController.swift */,
+				953B916427622ED1009B4836 /* ViewViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -121,8 +120,6 @@
 		95DA5914275DDDA700812FAF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9597128B275DF51B00B7EBA6 /* RealmDatas.swift */,
-				9597128D275DF61100B7EBA6 /* RealmCRUDModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,11 +241,10 @@
 			files = (
 				95DA58BD275DD60000812FAF /* ViewController.swift in Sources */,
 				95971292275F220800B7EBA6 /* TableViewController.swift in Sources */,
-				9597128C275DF51B00B7EBA6 /* RealmDatas.swift in Sources */,
 				959168482761BA7B0080DE06 /* EntryViewController.swift in Sources */,
 				95DA58B9275DD60000812FAF /* AppDelegate.swift in Sources */,
+				953B916527622ED1009B4836 /* ViewViewController.swift in Sources */,
 				95DA58BB275DD60000812FAF /* SceneDelegate.swift in Sources */,
-				9597128E275DF61100B7EBA6 /* RealmCRUDModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
