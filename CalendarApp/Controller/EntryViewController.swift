@@ -13,7 +13,9 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
    
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var timeTextField: UITextField!
+    @IBOutlet weak var startTextField: UITextField!
+    @IBOutlet weak var endTextField: UITextField!
+    
     private let  realm = try! Realm()
 //    完了ハンドラーについて考える
     public var completionHandler: (() -> Void)?
@@ -21,16 +23,14 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.becomeFirstResponder()
-//        datePicker.preferredDatePickerStyle = .wheels
+        timePicker.preferredDatePickerStyle = .wheels
         textField.delegate = self
-        timeTextField.delegate = self
-        timeTextField.inputView = timePicker
-//        UIDatePickerをインスタンス化
-//        let timePicker: UIDatePicker = {
-//            let dp = UIDatePicker()
-//            return
-//        }()
-        timeTextField.keyboardType = UIKeyboardType.numberPad
+        startTextField.delegate = self
+        startTextField.inputView = timePicker
+        endTextField.inputView = timePicker
+        
+        
+        startTextField.keyboardType = UIKeyboardType.numberPad
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()

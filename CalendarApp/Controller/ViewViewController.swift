@@ -26,7 +26,7 @@ class ViewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         itemLabel.text = argString
     }
     
