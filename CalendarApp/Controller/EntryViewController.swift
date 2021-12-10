@@ -6,12 +6,14 @@
 //
 import RealmSwift
 import UIKit
+import CloudKit
 
 class EntryViewController: UIViewController, UITextFieldDelegate {
-    
-    @IBOutlet weak var textField: UITextField!
+ 
    
-    
+    @IBOutlet weak var timePicker: UIDatePicker!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var timeTextField: UITextField!
     private let  realm = try! Realm()
 //    完了ハンドラーについて考える
     public var completionHandler: (() -> Void)?
@@ -19,11 +21,16 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.becomeFirstResponder()
-        
 //        datePicker.preferredDatePickerStyle = .wheels
         textField.delegate = self
-//        今日の日付を設定する
-//        datePicker.setDate(Date(), animated: true)
+        timeTextField.delegate = self
+        timeTextField.inputView = timePicker
+//        UIDatePickerをインスタンス化
+//        let timePicker: UIDatePicker = {
+//            let dp = UIDatePicker()
+//            return
+//        }()
+        timeTextField.keyboardType = UIKeyboardType.numberPad
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
