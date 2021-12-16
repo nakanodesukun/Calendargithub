@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -150,16 +150,16 @@
             </objects>
             <point key="canvasLocation" x="1063.768115942029" y="56.919642857142854"/>
         </scene>
-        <!--View Controller-->
+        <!--Picker Table View Controller-->
         <scene sceneID="3cY-ni-Okt">
             <objects>
-                <viewController id="Anr-P2-w0Z" sceneMemberID="viewController">
+                <viewController id="Anr-P2-w0Z" customClass="PickerTableViewController" customModule="CalendarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="cO2-k1-J5d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="yFP-n6-XKK">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NormalCell" id="yFP-n6-XKK" userLabel="NormalCell">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yFP-n6-XKK" id="9F0-84-wb3">
@@ -167,7 +167,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ty9-9o-yiK" userLabel="PickerCell" customClass="PickerCell" customModule="CalendarApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PickerCell" id="Ty9-9o-yiK" userLabel="PickerCell" customClass="PickerCell" customModule="CalendarApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="88" width="414" height="260.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ty9-9o-yiK" id="MT2-Ui-LT3">
@@ -188,7 +188,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="3d0-yu-1WZ">
-                                                    <rect key="frame" x="0.0" y="44" width="414" height="216"/>
+                                                    <rect key="frame" x="0.0" y="44" width="414" height="216.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="216" id="i9r-hD-A9b"/>
                                                     </constraints>
@@ -216,8 +216,17 @@
                                         <constraint firstItem="Wle-FU-WHP" firstAttribute="leading" secondItem="MT2-Ui-LT3" secondAttribute="leading" id="xfK-xQ-z5t"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="containerViewHeight" destination="Anr-P2-w0Z" id="M9z-29-pFx"/>
+                                    <outlet property="datePicker" destination="3d0-yu-1WZ" id="Qyr-r7-LhG"/>
+                                    <outlet property="label" destination="S2w-vS-i0p" id="tgx-7Q-SfT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Anr-P2-w0Z" id="te3-pO-Mey"/>
+                            <outlet property="delegate" destination="Anr-P2-w0Z" id="rnB-B0-3WL"/>
+                        </connections>
                     </tableView>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boB-6f-EQy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
